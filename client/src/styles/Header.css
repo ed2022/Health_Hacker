@@ -1,0 +1,16 @@
+.header {
+  background: olive;
+  height: 100px;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.header h1 {
+  margin: 0;
+  position: bottom;
+  padding-top: 20px;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-family: 'Montserrat', sans-serif;
+}
