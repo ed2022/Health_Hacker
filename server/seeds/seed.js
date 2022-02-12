@@ -1,6 +1,6 @@
 const connection = require('../config/connection.js');
 const { usernames, emails, thoughts } = require('./data');
-const { User, Thought } = require('../models')
+const { User, Workout } = require('../models')
 
 
 const user = [];
