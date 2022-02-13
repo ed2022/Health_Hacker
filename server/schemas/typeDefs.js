@@ -6,13 +6,15 @@ const typeDefs = gql`
         username: String
         email: String
         password: String
-        profile: Profile
+        userProfile: Profile
     }
 
     type Profile {
         id: ID
         user: User
         calendar: Calendar
+        exercises: [Exercise]
+        foods: [Food]
 
     }
     
@@ -20,7 +22,11 @@ const typeDefs = gql`
 
     }
 
-    type Workout {
+    type Exercise {
+    
+    }
+
+    type Food {
     
     }
 
