@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 
-// import schema from Book.js
+// import schema from workout and recipe 
 const Workout = require("./Workout");
 const Calendar = require("./Calendar");
 
