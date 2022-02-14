@@ -26,7 +26,7 @@ export const ADD_USER = gql`
   }
 `;
 //update workout
-export const UPDATE_WORKOUT = gql`
+export const UPDATE_GYMPLAN = gql`
   mutation updateGame($deck: String!, $score: Int!, $matrix: [[Int]]!) {
     updateGame(deck: $deck, score: $score, matrix: $matrix) {
       userId
@@ -36,9 +36,44 @@ export const UPDATE_WORKOUT = gql`
     }
   }
 `;
+
+export const ADD_GYMPLAN = gql`
+  mutation addGame($deck: String!) {
+    addGame(deck: $deck) {
+      _id
+      score
+      deck
+      userId
+      deck
+      matrix
+    }
+  }
+`;
 //update recipe if we are going with recipes
 //content will need to be chaged to match models
 export const UPDATE_RECIPE = gql`
+  mutation updateGame($deck: String!, $score: Int!, $matrix: [[Int]]!) {
+    updateGame(deck: $deck, score: $score, matrix: $matrix) {
+      userId
+      deck
+      score
+      matrix
+    }
+  }
+`;
+
+export const CREATE_POST = gql`
+  mutation updateGame($deck: String!, $score: Int!, $matrix: [[Int]]!) {
+    updateGame(deck: $deck, score: $score, matrix: $matrix) {
+      userId
+      deck
+      score
+      matrix
+    }
+  }
+`;
+
+export const DELETE_POST = gql`
   mutation updateGame($deck: String!, $score: Int!, $matrix: [[Int]]!) {
     updateGame(deck: $deck, score: $score, matrix: $matrix) {
       userId
