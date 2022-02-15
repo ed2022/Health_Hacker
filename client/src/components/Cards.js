@@ -9,27 +9,27 @@ function Cards() {
         <div className='cards__wrapper'>
           <ul className='cards__items'>
             <CardInput
-              src='./components/images/currentPlan.jpeg'
+              src={require('./pages/images/currentPlans.jpeg')}
               text='View your plans and update them!'
               label='Current Plans'
               path='/'
             />
             <CardInput
-              src='./components/images/'
+              src={require('./pages/images/bmi.webp')}
               text='See your most recent reported BMI records'
-              label='BMI'
+              label='BMI Check'
               path='/'
             />
           </ul>
           <ul className='cards__items'>
             <CardInput
-              src='images/img-3.jpg'
+              src={require('./pages/images/heart.jpg')}
               text='See if you are reaching your maxiumm by viewing your reported heart rate here!'
               label='Heart Rate'
               path='/'
             />
             <CardInput
-              src='images/img-4.jpg'
+              src={require('./pages/images/eat.gif')}
               text='See the recommended mean plans and update them to see if you are on the right track!'
               label='Healthing Eating'
               path='/'

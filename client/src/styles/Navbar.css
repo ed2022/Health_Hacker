@@ -14,19 +14,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px;
+    height: 75px;
     max-width: 1500px;
   }
   
   .navbar-logo {
-    color: #fff;
+    color:  #26e00d;
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
     display: flex;
-    align-items: center;
+    align-items:center;
   }
   
   .nav-menu {
@@ -41,7 +41,7 @@
   }
   
   .nav-item {
-    height: 80px;
+    height: 75px;
   }
   
   .nav-links {
@@ -54,7 +54,7 @@
   }
   
   .nav-links:hover {
-    border-bottom: 4px solid #fff;
+    border-bottom: 4px solid #26e00d;
     transition: all 0.2s ease-out;
   }
   
@@ -73,6 +73,7 @@
   @media screen and (max-width: 960px) {
     .NavbarItems {
       position: relative;
+      float: right;
     }
   
     .nav-menu {
@@ -132,7 +133,7 @@
       text-decoration: none;
       font-size: 1.5rem;
       background-color: transparent;
-      color: red;
+      color: #fff;
       padding: 14px 20px;
       border: 1px solid #fff;
       transition: all 0.3s ease-out;

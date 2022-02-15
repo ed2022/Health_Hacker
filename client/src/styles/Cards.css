@@ -1,5 +1,5 @@
 .cards {
-    padding: 4rem;
+    padding: 1.5rem;
     background: #fff;
   }
   
@@ -65,8 +65,8 @@
     max-width: calc((100%) - 60px);
     font-size: 12px;
     font-weight: 700;
-    color: #fff;
-    background-color: #1f98f4;
+    color: rgb(255, 255, 255);
+    background-color: #5f9943f6;
     box-sizing: border-box;
   }
   

@@ -1,15 +1,17 @@
 import React from 'react';
-import Cards from '../Cards'
+import InfoCards from '../InfoCards'
+import  '../../styles/InfoPage.css'
+
 
 export default function About() {
   return (
-    <div className="dashboard">
-      <h1>Welcome back</h1>
-
-      <p>
-        THIS IS THE NIGHTMARE CROSSING THE BORDER OF THE WORLD. I AM THE ONE WHO HAS BEEN WAITING FOR YOU. THIS IS NOT A GAME. NOW I WILL TELL YOU THE STORY OF HOW I GOT TO THE POINT WHERE I AM NOW.
-        YOU HAVE ENTERED THE AI ZONE BUDDY
-      </p>
+    <div className='info-container'>
+      {/* <img id="info-img" src={require('./images/front_page.jpg')} alt="info-img"/> */}
+      <video src={require('../pages/images/firstPage.mp4')} autoPlay loop muted />
+      <h1><br/>YOU'RE HEALTH JOURNEY STARTS HERE!</h1>
+      <div className='hero-btns'>
+       <InfoCards></InfoCards>
+      </div>
     </div>
   );
 }
