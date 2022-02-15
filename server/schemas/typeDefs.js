@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
     type User {
@@ -7,6 +7,7 @@ const typeDefs = gql`
         email: String
         password: String
         journal: Journal
+        
     }
 
     type Journal {
@@ -18,13 +19,13 @@ const typeDefs = gql`
 
     }
     
-    // type Calendar {
-    //     calendarID: ID
-    //     user: User
-    //     events: [Event]
-    // }
+    type Calendar {
+        calendarID: ID
+        user: User
+        events: [Event]
+    }
 
-    type gymPlan {
+    type GymPlan {
         gymPlanID: ID
         exercise: String
         sets: Int
@@ -33,7 +34,7 @@ const typeDefs = gql`
         user: User
     }
 
-    type foodPlan {
+    type FoodPlan {
         foodID: ID
         name: String
         calories: Int
