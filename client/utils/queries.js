@@ -6,30 +6,30 @@ export const USER = gql`
       _id
       username
       email
-      Gymplan
-      Recipies
+      gymPlan
+      foodPlan
       BMI
     }
   }
 `;
 
 
-export const DELETE_POST = gql`
-  {
-    users {
-      _id
-      username
-      email
-  }
-`;
+// export const DELETE_POST = gql`
+//   {
+//     users {
+//       _id
+//       username
+//       email
+//   }
+// `;
 
-export const GET_POSTS = gql`
-  {
-    users {
-      _id
-      username
-      email
+// export const GET_POSTS = gql`
+//   {
+//     users {
+//       _id
+//       username
+//       email
       
-  }
-`;
+//   }
+// `;
 

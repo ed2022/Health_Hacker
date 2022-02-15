@@ -8,26 +8,26 @@ export const ADD_USER = gql`
         _id
         username
         email
-        Gymplan
-        Recipies
+        gymPlan
+        foodPlan
         BMI
       }
     }
   }
 `;
 
-export const CREATE_POST = gql`
-  mutation createPost($post: String!) {
-    createPost(post: $post) {
-      userId
-    }
-  }
-`;
+// export const CREATE_POST = gql`
+//   mutation createPost($post: String!) {
+//     createPost(post: $post) {
+//       userId
+//     }
+//   }
+// `;
 
-export const DELETE_POST = gql`
-  mutation deletePost($post: String!) {
-    deletePost(dpost: $post) {
-      userId
-    }
-  }
+// export const DELETE_POST = gql`
+//   mutation deletePost($post: String!) {
+//     deletePost(dpost: $post) {
+//       userId
+//     }
+//   }
 `;
