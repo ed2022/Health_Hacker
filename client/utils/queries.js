@@ -1,118 +1,35 @@
 import { gql } from "@apollo/client";
 //getting a single user
-export const ME = gql`
+export const USER = gql`
   {
-    me {
+    query singleuser{
       _id
       username
       email
-      workout {
-        _id
-        score
-        recipes {
-          _id
-        }
-      }
+      Gymplan
+      Recipies
+      BMI
     }
   }
 `;
-//need to verify if we willl be going witj recipies
 
-// export const GET_GYMPLANS = gql`
-//   {
-//     users {
-//       _id
-//       username
-//       email
-//       badges
-//       games {
-//         _id
-//         score
-//         decks {
-//           _id
-//           deckname
-//           description
-//           cards {
-//             cardId
-//             front
-//             back
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
 
-export const GET_RECIPIES = gql`
-//   {
-//     users {
-//       _id
-//       username
-//       email
-//       badges
-//       games {
-//         _id
-//         score
-//         decks {
-//           _id
-//           deckname
-//           description
-//           cards {
-//             cardId
-//             front
-//             back
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
+export const DELETE_POST = gql`
+  {
+    users {
+      _id
+      username
+      email
+  }
+`;
 
 export const GET_POSTS = gql`
-//   {
-//     users {
-//       _id
-//       username
-//       email
-//       badges
-//       games {
-//         _id
-//         score
-//         decks {
-//           _id
-//           deckname
-//           description
-//           cards {
-//             cardId
-//             front
-//             back
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
-// export const GET_USER_BY_USERNAME = gql`
-//   query user($username: String!) {
-//     user(username: $username) {
-//       _id
-//       username
-//       email
-//       badges
-//       games {
-//         _id
-//         score
-//         decks {
-//           _id
-//           deckname
-//           description
-//           cards {
-//             cardId
-//             front
-//             back
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
+  {
+    users {
+      _id
+      username
+      email
+      
+  }
+`;
+
