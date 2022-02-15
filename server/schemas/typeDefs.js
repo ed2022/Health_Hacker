@@ -13,9 +13,9 @@ const typeDefs = gql`
     type Journal {
         journalID: ID
         user: User
-        calendar: Calendar
-        gymPlan: GymPlan
-        foodPlan: FoodPlan
+        Calendar: Calendar
+        GymPlan: GymPlan
+        FoodPlan: FoodPlan
 
     }
     
@@ -23,6 +23,7 @@ const typeDefs = gql`
         calendarID: ID
         user: User
         events: [Event]
+        
     }
 
     type GymPlan {

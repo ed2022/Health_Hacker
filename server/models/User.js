@@ -16,8 +16,8 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
-  
-  //referencees alreday created journal attaached to the user id 
+
+  //references alreday created journal attached to the user id 
   journal: {
     type: Schema.Types.ObjectId,
     ref: "Journal",
