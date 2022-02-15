@@ -1,9 +1,5 @@
 const User = require('./User');
-const Post = require('./Post');
-const Profile = require('./Profile');
-const Recipe = require('./Recipe');
-const Calendar = require('./Calendar');
-const Workout = require('./Workout');
+const Journal = require('./Journal');
 
 
-module.exports = { User, Post, Profile, Recipe, Calendar, Workout };
+module.exports = { User, Journal };
