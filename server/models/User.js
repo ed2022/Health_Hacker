@@ -1,40 +1,39 @@
 const { Schema, model } = require("mongoose");
 
 const userSchema = new Schema({
-  username: {
-    type: String,
-    required: true,
-    unique: true,
-  },
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-    match: [/.+@.+\..+/, "Must use a valid email address"],
-  },
-  password: {
-    type: String,
-    required: true,
-  },
 
-  Gymplan: [
-    {
-      type: String,
-      trim: true,
+    username: {
+        type: String,
+        required: true,
+        unique: true,
     },
-  ],
-
-  Recipies: [
-    {
-      type: String,
-      trim: true,
+    email: {
+        type: String,
+        required: true,
+        unique: true,
+        match: [/.+@.+\..+/, "Must use a valid email address"],
     },
-  ],
+    password: {
+        type: String,
+        required: true,
+    },
+    gymPlan: [
+        {
+            type: String,
+            trim: true,
+        },
+    ],
+    foodPlan: [
+        {
+            type: String,
+            trim: true,
+        },
+    ],
+    BMI: {
+        type: String,
+        required: true,
+    },
 
-  BMI: {
-    type: String,
-    required: true,
-  },
 });
 
 const User = model("User", userSchema);
