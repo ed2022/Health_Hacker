@@ -56,10 +56,13 @@ const typeDefs = gql`
     type Mutation {
         register(registerInput: RegisterInput): Auth
         login(username: String!, password: String!): Auth        
-        updateJournal(): Journal
-        // updateCalendar(): Calendar
-        updategymPlan(): gymPlan
-        updatefoodPlan(): foodPlan
+        addJournal(): Journal
+        addCalendarEvent(calendarID: ID!): Calendar
+        removeCalendarEvent(calendarID: ID!): Calendar
+        addGymPlan(): GymPlan
+        removeGymPlan(gymPlanID: ID!): GymPlan
+        addFoodPlan(): FoodPlan
+        removeFoodPlan(foodID: ID!): FoodPlan
     }
     `;
 
