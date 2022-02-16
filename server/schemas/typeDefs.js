@@ -1,33 +1,45 @@
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
     type User {
-        id: ID
+        userID: ID
         username: String
         email: String
         password: String
-        userProfile: Profile
+        journal: Journal
+        
     }
 
-    type Profile {
-        id: ID
-        user: User
-        calendar: Calendar
-        exercises: [Exercise]
-        foods: [Food]
+    type Journal {
+        journalID: ID
+        Calendar: Calendar
+        GymPlan: GymPlan
+        FoodPlan: FoodPlan
 
     }
     
     type Calendar {
-
+        calendarID: ID
+        user: User
+        events: [Event]
+        
     }
 
-    type Exercise {
-    
+    type GymPlan {
+        gymPlanID: ID
+        exercise: String
+        sets: Int
+        reps: Int
+        weight: Int
+        user: User
     }
 
-    type Food {
-    
+    type FoodPlan {
+        foodPlanID: ID
+        name: String
+        calories: Int
+        servingSize: String
+        user: User
     }
 
     type Auth {
@@ -36,17 +48,20 @@ const typeDefs = gql`
     }
 
     type Query {
-    
+        me: User
+        getJournal( journalID: ID!): Journal 
     }
 
     type Mutation {
-        login(email: String!, password: String!): Auth
-        addUser(username: String!, email: String!, password: String!): Auth
-        updateProfile(): Profile
-        updateCalendar(): Calendar
-        updateWorkout(): Workout
-
-
+        register(username: String!, email: String!, password: String!): Auth
+        login(username: String!, password: String!): Auth        
+        addJournal(username: String!, email: String!, password: String!): Journal
+        addCalendarEvent(calendarID: ID!, event: String!): Calendar
+        removeCalendarEvent(calendarID: ID!, event: String!): Calendar
+        addGymPlan(gymPlanID: ID!, exercise: String!): GymPlan
+        removeGymPlan(gymPlanID: ID!, exercise: String!): GymPlan
+        addFoodPlan(FoodPlanID: ID!, name: String!): FoodPlan
+        removeFoodPlan(foodPlanID: ID!, name: String!): FoodPlan
     }
     `;
 

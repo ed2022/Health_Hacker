@@ -1,8 +1,8 @@
 import { gql } from "@apollo/client";
 //getting a single user
-export const USER = gql`
-  {
-    query singleuser{
+export const QUERY_USER = gql`
+  Query allusers{
+    User{
       _id
       username
       email
@@ -13,23 +13,15 @@ export const USER = gql`
   }
 `;
 
-
-// export const DELETE_POST = gql`
-//   {
-//     users {
-//       _id
-//       username
-//       email
-//   }
-// `;
-
-// export const GET_POSTS = gql`
-//   {
-//     users {
-//       _id
-//       username
-//       email
-      
-//   }
-// `;
-
+export const QUERY_SINGLE_USER = gql`
+  Query singleuser{
+     User{
+      _id
+      username
+      email
+      gymPlan
+      foodPlan
+      BMI
+    }
+  }
+`;
