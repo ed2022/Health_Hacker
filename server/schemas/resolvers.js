@@ -46,9 +46,15 @@ const resolvers = {
             return { token, user };
         },
 
-        addJournal: async (parent, { name, email, password }) => {
-            const journal = await Journal.create({ name, email, password });
-            return { journal };
+        addJournal: async (parent, { userID, username, email, password }) => {
+            journalID: userID,
+            {
+                $set: { Journals: Journal },
+            },
+                { new: true };
+            const journal = await Journal.create({ username: username, email: email, password: password }); //pass into it whatever Items we want to include in the journal object
+            return journal;
+
         },
 
         addCalendarEvent: async (parent, { calendarID, event }) => {

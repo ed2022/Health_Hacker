@@ -12,7 +12,6 @@ const typeDefs = gql`
 
     type Journal {
         journalID: ID
-        user: User
         Calendar: Calendar
         GymPlan: GymPlan
         FoodPlan: FoodPlan
@@ -36,7 +35,7 @@ const typeDefs = gql`
     }
 
     type FoodPlan {
-        foodID: ID
+        foodPlanID: ID
         name: String
         calories: Int
         servingSize: String
@@ -54,15 +53,15 @@ const typeDefs = gql`
     }
 
     type Mutation {
-        register(registerInput: RegisterInput): Auth
+        register(username: String!, email: String!, password: String!): Auth
         login(username: String!, password: String!): Auth        
-        addJournal(): Journal
-        addCalendarEvent(calendarID: ID!): Calendar
-        removeCalendarEvent(calendarID: ID!): Calendar
-        addGymPlan(): GymPlan
-        removeGymPlan(gymPlanID: ID!): GymPlan
-        addFoodPlan(): FoodPlan
-        removeFoodPlan(foodID: ID!): FoodPlan
+        addJournal(username: String!, email: String!, password: String!): Journal
+        addCalendarEvent(calendarID: ID!, event: String!): Calendar
+        removeCalendarEvent(calendarID: ID!, event: String!): Calendar
+        addGymPlan(gymPlanID: ID!, exercise: String!): GymPlan
+        removeGymPlan(gymPlanID: ID!, exercise: String!): GymPlan
+        addFoodPlan(FoodPlanID: ID!, name: String!): FoodPlan
+        removeFoodPlan(foodPlanID: ID!, name: String!): FoodPlan
     }
     `;
 
