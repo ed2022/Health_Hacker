@@ -3,6 +3,9 @@ import { gql } from "@apollo/client";
 export const GET_USER = gql`
   {
     query user{
+export const QUERY_USER = gql`
+  Query allusers{
+    User{
       _id
       username
       email
@@ -12,6 +15,7 @@ export const GET_USER = gql`
   }
 `;
 
+
 export const GET_JOURNAL = gql`
   {
     query journal{
@@ -20,3 +24,16 @@ export const GET_JOURNAL = gql`
 
 
 
+
+export const QUERY_SINGLE_USER = gql`
+  Query singleuser{
+     User{
+      _id
+      username
+      email
+      gymPlan
+      foodPlan
+      BMI
+    }
+  }
+`;

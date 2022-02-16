@@ -17,22 +17,10 @@ const userSchema = new Schema({
     required: true,
   },
 
-  Gymplan: [
-    {
-      type: String,
-      trim: true,
-    },
-  ],
-
-  Recipies: [
-    {
-      type: String,
-      trim: true,
-    },
-  ],
-
-  BMI: {
-    type: String,
+  //references alreday created journal attached to the user id 
+  journal: {
+    type: Schema.Types.ObjectId,
+    ref: "Journal",
     required: true,
   },
 });
