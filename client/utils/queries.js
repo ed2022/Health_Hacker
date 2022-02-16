@@ -2,9 +2,7 @@ import { gql } from "@apollo/client";
 //getting a single user
 export const GET_USER = gql`
   {
-    query user{
-export const QUERY_USER = gql`
-  Query allusers{
+    query User{
     User{
       _id
       username
@@ -19,21 +17,30 @@ export const QUERY_USER = gql`
 export const GET_JOURNAL = gql`
   {
     query journal{
+    journal{
       _id
-      
-
-
-
-
-export const QUERY_SINGLE_USER = gql`
-  Query singleuser{
-     User{
-      _id
-      username
-      email
-      gymPlan
-      foodPlan
+      Calendar
+      GymPlan
+      FoodPlan
       BMI
+      HeartRate
     }
   }
 `;
+
+
+
+
+
+// export const QUERY_SINGLE_USER = gql`
+//   Query singleuser{
+//      User{
+//       _id
+//       username
+//       email
+//       gymPlan
+//       foodPlan
+//       BMI
+//     }
+//   }
+// `;

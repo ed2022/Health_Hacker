@@ -29,7 +29,9 @@ const resolvers = {
             if (user) {
                 throw new AuthenticationError('User already exists!');
             }
-            const user = await User.create({ username, email, password });
+            else {
+                user = await User.create({ username, email, password });
+            }
             const token = signToken(user);
             return { token, user };
         },
