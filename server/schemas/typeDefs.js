@@ -22,7 +22,7 @@ const typeDefs = gql`
     type Calendar {
         calendarID: ID
         user: User
-        events: [Event]
+        events: [Int]
         
     }
 

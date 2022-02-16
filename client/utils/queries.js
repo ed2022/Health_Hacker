@@ -7,8 +7,6 @@ export const GET_USER = gql`
       _id
       username
       email
-      password
-      journal
     }
   }
 `;
