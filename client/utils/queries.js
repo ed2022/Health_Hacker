@@ -1,35 +1,22 @@
 import { gql } from "@apollo/client";
 //getting a single user
-export const USER = gql`
+export const GET_USER = gql`
   {
-    query singleuser{
+    query user{
       _id
       username
       email
-      gymPlan
-      foodPlan
-      BMI
+      password
+      journal
     }
   }
 `;
 
-
-// export const DELETE_POST = gql`
-//   {
-//     users {
-//       _id
-//       username
-//       email
-//   }
-// `;
-
-// export const GET_POSTS = gql`
-//   {
-//     users {
-//       _id
-//       username
-//       email
+export const GET_JOURNAL = gql`
+  {
+    query journal{
+      _id
       
-//   }
-// `;
+
+
 
